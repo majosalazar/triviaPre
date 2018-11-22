@@ -22,7 +22,24 @@ questionMiscelaneas = () => {
 }
 
 finalizar1 = () => {
-  let resultado1 = 
+  let pregunta1 = document.trivia1.preguntaA1.value;
+  let pregunta2 = document.trivia1.preguntaA2.value;
+  let pregunta3 = document.trivia1.preguntaA3.value;
+  let correctas = 0; 
+
+  if (pregunta1 == "8") {
+    correctas++;
+  }
+
+  if (pregunta2 == "El sol") {
+    correctas++;
+  }
+  if (pregunta3 == "La vía láctea") {
+    correctas++;
+  }
+
+  
+
 }
 
 /*
