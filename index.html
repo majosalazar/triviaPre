@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- bienvenida, ingresar nombre y selecionar categorias -->
+  <div id="saludo">
+    <h1>Bienvenida!</h1>
+    <p>¿Cual es tu nombre?</p>
+    <input type="text" id="nombreIngresado">
+    <button onclick="irAPreguntas()">Ingresar</button>
+  </div>
+  <div id="categoria">
+    <p id="nombre"></p>
+    <p>Escoge la categoria</p>
+    <button class="botones" onclick="questionMundo()">MUNDO</button>
+    <button class="botones" onclick="questionMiscelaneas()">MISCELANEAS</button> 
+  </div>
+
+  <!-- preguntas -->
+  <div id="preguntasMundo">
+    <form id="trivia1">
+      <p>¿Cuantos planetas tiene nuestro sistema solar?</p>
+      <input type="radio" name="preguntaA1" id="">12
+      <input type="radio" name="preguntaA1" id="">8
+      <input type="radio" name="preguntaA1" id="">10
+  
+      <br>
+      <p>¿Cuál es nuestra principal fuente de energía?</p>
+      <input type="radio" name="preguntaA2" id="">El sol
+      <input type="radio" name="preguntaA2" id="">El mar
+      <input type="radio" name="preguntaA2" id="">Los volcanes
+  
+      <br>
+      <p>¿Cuál es el nombre de nuestra galaxia?</p>
+      <input type="radio" name="preguntaA3" id="">La vía láctea
+      <input type="radio" name="preguntaA3" id="">Andrómeda
+      <input type="radio" name="preguntaA3" id="">Júpiter
+      <br>
+      <button onclick="finalizar1()">Ver Resultados</button>
+
+    </form>
+  </div>
+  
+  <div id="preguntasMiscelaneas">
+    <p>¿Quién descubrió America?</p>
+    <input type="radio" name="preguntaB1" id="">Cristobal Colón
+    <input type="radio" name="preguntaB1" id="">Pedro de Valdivia
+    <input type="radio" name="preguntaB1" id="">Hernando de Magallanes
+
+    <br>
+    <p>¿En qué continente se encuentra Chile?</p>
+    <input type="radio" name="preguntaB2" id="">Asia
+    <input type="radio" name="preguntaB2" id="">Africa
+    <input type="radio" name="preguntaB2" id="">America del sur
+
+    <br>
+    <p>¿En qué año terminó la segunda guerra mundial?</p>
+    <input type="radio" name="preguntaB3" id="">1925
+    <input type="radio" name="preguntaB3" id="">1942
+    <input type="radio" name="preguntaB3" id="">1945
+    <br>
+    <button onclick="finalizar2()">Ver Resultados</button>
+  </div>
+
+ 
+
+  <!-- ver resultados -->
+  <div id="verResultados"></div>
+  <script src="app.js"></script>
+</body>
+</html>

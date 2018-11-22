@@ -1,0 +1,24 @@
+#saludo {
+  display: block;
+  background-color: aquamarine;
+}
+
+#categoria {
+  display: none;
+}
+
+#preguntasMundo {
+  display: none;
+}
+
+#preguntasMiscelaneas {
+  display: none;
+}
+
+#finalizar1 {
+  display: block;
+}
+
+#finalizar2 {
+  display: block;
+}
