@@ -95,7 +95,12 @@ resultado2 = () => {
     incorrectas++;
   }
 
-  document.getElementById("verResultados").innerHTML = correctas;
+  document.getElementById("verResultados").innerHTML = `
+  <h4>Tus resultados son: </h4>
+  <p>Correctas: ${correctas}</p>
+  <p>Incorrectas: ${incorrectas}</p>
+
+  `
 }
 
   
