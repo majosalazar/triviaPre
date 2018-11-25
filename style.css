@@ -1,6 +1,6 @@
+/* displays */
 #saludo {
   display: block;
-  background-color: aquamarine;
 }
 
 #categoria {
@@ -15,10 +15,11 @@
   display: none;
 }
 
-#finalizar1 {
-  display: block;
+#verResultados {
+  display: none;
 }
 
-#finalizar2 {
-  display: block;
+/* estilos */
+body {
+  text-align: center;
 }

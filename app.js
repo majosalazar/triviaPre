@@ -3,6 +3,7 @@ irAPreguntas = () => {
   categoria.style.display = "block";
   preguntasMundo.style.display = "none";
   preguntasMiscelaneas.style.display = "none";
+  verResultados.style.display = "none";
   let name = document.getElementById("nombreIngresado").value;
   document.getElementById("nombre").innerHTML = "Hola " + name.toUpperCase();
 }
@@ -12,6 +13,7 @@ questionMundo = () => {
   categoria.style.display = "none";
   preguntasMundo.style.display = "block";
   preguntasMiscelaneas.style.display = "none";
+  verResultados.style.display = "none";
 }
 
 questionMiscelaneas = () => {
@@ -19,74 +21,81 @@ questionMiscelaneas = () => {
   categoria.style.display = "none";
   preguntasMundo.style.display = "none";
   preguntasMiscelaneas.style.display = "block";
+  verResultados.style.display = "none"; 
 }
 
-finalizar1 = () => {
+
+resultado1 = () => {
+  saludo.style.display = "none";
+  categoria.style.display = "none";
+  preguntasMundo.style.display = "none";
+  preguntasMiscelaneas.style.display = "none";
+  verResultados.style.display = "block"; 
+
   let pregunta1 = document.trivia1.preguntaA1.value;
   let pregunta2 = document.trivia1.preguntaA2.value;
   let pregunta3 = document.trivia1.preguntaA3.value;
   let correctas = 0; 
+  let incorrectas = 0;
 
+  console.log(pregunta1, pregunta2, pregunta3)
+  
   if (pregunta1 == "8") {
     correctas++;
+  } else {
+    incorrectas++;
   }
 
   if (pregunta2 == "El sol") {
     correctas++;
+  }else {
+    incorrectas++;
   }
+
   if (pregunta3 == "La vía láctea") {
     correctas++;
+  }else {
+    incorrectas++;
   }
 
-  
-
+  document.getElementById("verResultados").innerHTML = correctas;
 }
 
-/*
-function questionmundo(){
-  var puntos = 0;
-  var respuesta1= prompt("¿Cuantos planetas tiene nuestro sistema solar?");
-  
-  if (respuesta1.toUpperCase()== "8".toUpperCase()){
-    puntos=puntos + 1;
-  }else {
-     }
-var respuesta2= prompt("¿Cuál es nuestra principal fuente de energia?");
-  if (respuesta2=='El sol')
-     {
-       puntos=puntos + 1;
-  }else {
-    }
-var respuesta3= prompt("¿Cuál es el nombre de nuestra galaxia?");
-  if (respuesta3.toUpperCase()== "la vía láctea".toUpperCase()){
-    
-    puntos=puntos + 1;
-  }else {
-      }
-  alert("tu puntaje final es " + puntos);
- }
+resultado2 = () => {
+  saludo.style.display = "none";
+  categoria.style.display = "none";
+  preguntasMundo.style.display = "none";
+  preguntasMiscelaneas.style.display = "none";
+  verResultados.style.display = "block"; 
 
-function questionmiscelaneas(){
-  var puntos= 0;
-  var respuesta1= prompt("¿Quién descubrió America? ");
-  if (respuesta1.toUpperCase()== "Cristobal Colón".toUpperCase()){
-    
-    puntos=puntos + 1;
+  let pregunta4 = document.trivia2.preguntaB1.value;
+  let pregunta5 = document.trivia2.preguntaB2.value;
+  let pregunta6 = document.trivia2.preguntaB3.value;
+  let correctas = 0; 
+  let incorrectas = 0;
+
+  console.log(pregunta4, pregunta5, pregunta6)
+  
+  if (pregunta4 == "Cristobal Colón") {
+    correctas++;
+    console.log("casi")
+  } else {
+    incorrectas++;
+  }
+
+  if (pregunta5 == "América del sur") {
+    correctas++;
   }else {
-     }
-var respuesta2= prompt("¿En qué continente se encuentra Chile?");
-  if (respuesta2.toUpperCase()== "America del sur".toUpperCase())
-     {
-    
-       puntos=puntos + 1;
+    incorrectas++;
+  }
+
+  if (pregunta6 == "1945") {
+    correctas++;
   }else {
-    }
-var respuesta3= prompt("¿En qué año terminó la segunda guerra mundial?");
-  if (respuesta3.toUpperCase()== "1945".toUpperCase()){
-    
-    puntos=puntos + 1;
-  }else {
-    }
-  alert("tu puntaje final es " + puntos);
+    incorrectas++;
+  }
+
+  document.getElementById("verResultados").innerHTML = correctas;
 }
-*/ 
+
+  
